@@ -1,0 +1,35 @@
+*.class
+*.classpath
+*.project
+*.settings/
+
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files #
+*.jar
+# *.war
+*.ear
+*.idea
+*.log
+
+target
+
+src/test
+app/src/test
+app/target
+cms/src/test
+cms/target
+core/src/test
+core/target
+model/src/test
+model/target
+orm/src/test
+orm/target
+web/src/test
+web/target
+
+hs_err_pid*
+
+*.iml
