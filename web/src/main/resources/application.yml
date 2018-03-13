@@ -1,0 +1,71 @@
+# service
+server:
+  port: 8080
+  context-path: /v1
+
+# spring
+spring:
+#  profiles:
+#    active: dev
+
+  # druid  db.dankal.cn / mysql
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://db.dankal.cn/dankal_czh?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&useSSL=false
+    username: deploy
+    password: 0D9F8640-3FB1-4A56-9E26-646F71EE2E45
+    defaultAutoCommit: false
+    connectionInitSqls: set names utf8mb4;
+    timeBetweenEvictionRunsMillis: 60000
+    minEvictableIdleTimeMillis: 600000
+    testWhileIdle: true
+    validationQuery: select 1
+    maxActive: 50
+    minIdle: 0
+
+  # session
+  session:
+    store-type: none
+
+  # redis redis-01 / localhost
+  redis:
+    database: 2
+    host: redis-01
+    port: 6379
+    timeout: 100000
+    pool:
+      max-active: 1024
+      max-idle: 200
+      min-idle: 50
+      max-wait: 1000
+
+  # aop
+  aop:
+    proxy-target-class: true
+
+  # cache
+  cache:
+    ehcache:
+      config: classpath:cache/ehcache.xml
+
+  # jackson
+  jackson:
+    default-property-inclusion: non_null
+
+# mybatis
+mybatis:
+  type-aliases-package: com.java.web.model.dto
+  mapper-locations: classpath:mybatis/mapper/*.xml,classpath:mybatis/mapper/cms/*.xml
+  config-location: classpath:mybatis/mybatis-config.xml
+
+mapper:
+  mappers:
+    - com.java.web.dao.mybatis.cms.CmsDeviceFaultMapper
+  not-empty: false
+  identity: MYSQL
+
+# logger
+logging:
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss:SSS} - %5p ${PID:- } --- [%15.15t] %-40.40logger{39} :%3L: %m%n:-%wEx"

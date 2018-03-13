@@ -1,6 +1,6 @@
 package com.czh.core.constant;
 
-import com.java.core.http.ApiGetUtil;
+import com.czh.core.utils.ApiGetUtil;
 import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
 import org.apache.http.client.methods.HttpGet;
@@ -10,7 +10,8 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 
-import static com.java.core.constant.ThirdPartConstant.TENCENT_MAP_RANDOM_LOCATION_URL;
+import static com.czh.core.constant.ThirdPartConstant.TENCENT_MAP_RANDOM_LOCATION_URL;
+
 
 /**
  * Latitude and longitude 经纬度位置获取服务的相关变量和方法

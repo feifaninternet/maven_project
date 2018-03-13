@@ -1,4 +1,4 @@
-package com.czh.core.annotation;
+package com.czh.cms.annotation;
 
 import com.czh.core.enums.Permission;
 

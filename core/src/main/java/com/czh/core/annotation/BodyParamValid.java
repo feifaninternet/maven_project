@@ -8,9 +8,9 @@ import java.lang.annotation.Target;
 /**
  * @author xfan
  * @date Created on 2018/2/7 -- 15:31
- * @desc Ignore token annotation
+ * @desc  body 请求参数验证注解
  */
 @Target(ElementType.METHOD)
 @Retention(RetentionPolicy.RUNTIME)
-public @interface IgnorePermission {
+public @interface BodyParamValid {
 }

@@ -1,0 +1,7 @@
+# stage environment
+api:
+  domain:
+    baseUrl: http://localhost/frame/
+  common:
+    uuid: 1234
+    accessToken: xfan

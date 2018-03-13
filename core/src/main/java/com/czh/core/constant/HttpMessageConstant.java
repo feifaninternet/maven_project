@@ -1,6 +1,10 @@
 package com.czh.core.constant;
 
-
+/**
+ * @author xfan
+ * @date Created on 2018/2/7 -- 15:51
+ * @desc Custom httpResponseMessage
+ */
 public final class HttpMessageConstant {
 
     private HttpMessageConstant() {
