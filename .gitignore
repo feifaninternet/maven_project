@@ -2,6 +2,7 @@
 *.classpath
 *.project
 *.settings/
+*.springBeans
 
 
 # Mobile Tools for Java (J2ME)
@@ -13,6 +14,9 @@
 *.ear
 *.idea
 *.log
+*.mvn
+*.iws
+*.ipr
 
 target
 
