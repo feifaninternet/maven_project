@@ -9,7 +9,7 @@ import org.springframework.context.annotation.PropertySource;
  * @date Created on 2018/2/7 -- 15:21
  * @desc
  */
-@MapperScan(basePackages = "com.java.web.dao.mybatis")
+@MapperScan(basePackages = {"com.czh.orm.mybatis.app", "com.czh.orm.mybatis.cms"})
 @PropertySource("classpath:properties/system.properties")
 @SpringBootApplication
 public class Application {

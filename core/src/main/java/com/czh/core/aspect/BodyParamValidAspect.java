@@ -21,7 +21,7 @@ import java.util.List;
 /**
  * @author xfan
  * @date Created on 2018/3/13 -- 17:51
- * @desc
+ * @desc AOP 请求参数校验
  */
 @Aspect
 @Component
@@ -37,7 +37,7 @@ public class BodyParamValidAspect {
                 BindingResult result = (BindingResult) paramObj[1];
                 ResponseEntity errorMap = this.validRequestParams(result);
                 if(errorMap != null){
-                    log.error("请求体验证为通过");
+                    log.error("请求体验证未通过");
                     AdvanceResponseSupport.advanceResponse(errorMap);
                 }
             }

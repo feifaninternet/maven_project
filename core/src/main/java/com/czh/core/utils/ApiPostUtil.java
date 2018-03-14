@@ -1,6 +1,5 @@
 package com.czh.core.utils;
 
-import com.java.core.constant.CustomConstant;
 import org.apache.http.HttpStatus;
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpEntityEnclosingRequestBase;
@@ -14,6 +13,8 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+
+import static com.czh.core.constant.CustomConstant.RESPONSE_UNAUTHORIZED;
 
 /**
  * @author xfan
@@ -42,7 +43,7 @@ public class ApiPostUtil {
             InputStream inStream = httpResponse.getEntity().getContent();
             BufferedReader reader = new BufferedReader(new InputStreamReader(inStream, "utf-8"));
             if (httpResponse.getStatusLine().getStatusCode() == HttpStatus.SC_UNAUTHORIZED) {
-                return CustomConstant.RESPONSE_UNAUTHORIZED;
+                return RESPONSE_UNAUTHORIZED;
             }
             String line;
             while ((line = reader.readLine()) != null) {

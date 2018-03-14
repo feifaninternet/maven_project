@@ -1,7 +1,7 @@
 # service
 server:
   port: 8080
-  context-path: /v1
+  context-path: /v2
 
 # spring
 spring:
@@ -12,7 +12,7 @@ spring:
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://db.dankal.cn/dankal_czh?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&useSSL=false
+    url: jdbc:mysql://mysql/dankal_czh?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&useSSL=false
     username: deploy
     password: 0D9F8640-3FB1-4A56-9E26-646F71EE2E45
     defaultAutoCommit: false
@@ -58,12 +58,6 @@ mybatis:
   type-aliases-package: com.java.web.model.dto
   mapper-locations: classpath:mybatis/mapper/*.xml,classpath:mybatis/mapper/cms/*.xml
   config-location: classpath:mybatis/mybatis-config.xml
-
-mapper:
-  mappers:
-    - com.java.web.dao.mybatis.cms.CmsDeviceFaultMapper
-  not-empty: false
-  identity: MYSQL
 
 # logger
 logging:
