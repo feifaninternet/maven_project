@@ -1,4 +1,4 @@
-package com.czh.cms;
+package com.czh.cms.aspect;
 
 import com.czh.cms.annotation.IgnorePermission;
 import com.czh.cms.annotation.ValidateManagerPermission;

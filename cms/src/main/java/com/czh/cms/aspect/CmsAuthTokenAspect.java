@@ -1,7 +1,6 @@
-package com.czh.cms;
+package com.czh.cms.aspect;
 
 import com.czh.core.aspect.AuthTokenAspect;
-import com.czh.core.constant.CustomConstant;
 import com.czh.orm.mybatis.mini.TokenMapper;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
@@ -12,6 +11,7 @@ import org.springframework.stereotype.Component;
 import javax.annotation.Resource;
 
 import static com.czh.core.constant.CustomConstant.CMS_TOKEN;
+
 
 /**
  * @author xfan
@@ -30,6 +30,6 @@ public class CmsAuthTokenAspect {
 
     @Around("pointcut()")
     public Object before(ProceedingJoinPoint joinPoint) throws Throwable {
-        return AuthTokenAspect.validateToken(joinPoint, tokenMapper, CustomConstant.CMS_TOKEN);
+        return AuthTokenAspect.validateToken(joinPoint, tokenMapper,CMS_TOKEN);
     }
 }

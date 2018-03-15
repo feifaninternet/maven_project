@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
         <artifactId>javaee_project</artifactId>
-        <groupId>com.java</groupId>
+        <groupId>com.czh</groupId>
         <version>1.0.0</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
@@ -14,12 +14,12 @@
 
     <dependencies>
         <dependency>
-            <groupId>com.java</groupId>
+            <groupId>com.czh</groupId>
             <artifactId>cms</artifactId>
             <version>${core.version}</version>
         </dependency>
         <dependency>
-            <groupId>com.java</groupId>
+            <groupId>com.czh</groupId>
             <artifactId>mini</artifactId>
             <version>${core.version}</version>
         </dependency>
@@ -40,7 +40,7 @@
                 </executions>
             </plugin>
         </plugins>
-        <finalName>javaee_bsd</finalName>
+        <finalName>javaee_czh</finalName>
     </build>
 
 </project>

@@ -23,7 +23,7 @@ import javax.servlet.http.HttpServletRequest;
 public class LoggerConfig {
     private Logger logger = LoggerFactory.getLogger(this.getClass());
 
-    @Pointcut("execution(* com.java.web.service..*(..))")
+    @Pointcut("execution(* *.*.*.service..*(..))")
     private void logPointCut() {
     }
 

@@ -14,12 +14,12 @@ import org.springframework.stereotype.Service;
 public class TestServiceImpl implements TestService {
 
     @Override
-    public ResponseEntity login(SignInVO body) throws Exception {
-        return null;
+    public String login(SignInVO body){
+        return "aaa";
     }
 
     @Override
-    public ResponseEntity getMessage(String uuid) {
-        return null;
+    public String getMessage(String uuid) {
+        return "aaa";
     }
 }

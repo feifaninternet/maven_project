@@ -21,23 +21,23 @@ import javax.validation.Valid;
  */
 @Api("测试")
 @RestController
-@RequestMapping("test")
+@RequestMapping("/test")
 public class TestController {
 
     @Resource
     private TestService testService;
 
     @BodyParamValid
-    @PostMapping("login")
+    @PostMapping("/login")
     @ApiOperation(value = "登录", httpMethod = "POST")
-    public ResponseEntity login(@RequestBody @Valid SignInVO body, BindingResult result) {
-        return null;
+    public String login(@RequestBody @Valid SignInVO body, BindingResult result) {
+        return testService.login(body);
     }
 
     @PathAndQueryParamValid
-    @GetMapping("path_str/{uuid}")
+    @GetMapping("/path_str/{uuid}")
     @ApiOperation(value = "登录2",httpMethod = "GET")
-    public ResponseEntity getMessage(@PathVariable @ParameterValid(type = String.class,msg = "Uuid is blank") String uuid) {
-        return null;
+    public String getMessage(@PathVariable @ParameterValid(type = String.class,msg = "uuid 不能为空") String uuid) {
+        return testService.getMessage(uuid);
     }
 }

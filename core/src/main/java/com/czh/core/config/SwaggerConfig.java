@@ -2,6 +2,7 @@ package com.czh.core.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.stereotype.Component;
 import springfox.documentation.builders.ApiInfoBuilder;
 import springfox.documentation.builders.ParameterBuilder;
 import springfox.documentation.builders.PathSelectors;
@@ -36,12 +37,14 @@ public class SwaggerConfig {
                 .required(false).build();
         pars.add(tokenPar.build());
         return new Docket(DocumentationType.SWAGGER_2)
-                .apiInfo(apiInfo())
+                .forCodeGeneration(true)
                 .select()
                 .apis(RequestHandlerSelectors.basePackage("com.czh"))
+                //过滤生成链接
                 .paths(PathSelectors.any())
                 .build()
-                .globalOperationParameters(pars);
+                .globalOperationParameters(pars)
+                .apiInfo(apiInfo());
     }
 
     private ApiInfo apiInfo(){
