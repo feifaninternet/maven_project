@@ -15,13 +15,13 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="cms" target="1.8" />
+      <module name="cms" target="1.5" />
       <module name="core" target="1.8" />
       <module name="javaee_project" target="1.8" />
-      <module name="mini" target="1.8" />
+      <module name="mini" target="1.5" />
       <module name="model" target="1.8" />
       <module name="orm" target="1.8" />
-      <module name="web" target="1.8" />
+      <module name="web" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>
